@@ -15,7 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds);
+        self.window?.makeKeyAndVisible();
+        let token = NSUserDefaults.standardUserDefaults().objectForKey(AccountTokenKey);
+        if (token == nil) {
+            let oauthVC = LQBOauthViewController();
+            self.window?.rootViewController = oauthVC;
+        }else{
+            let tabVC = LQBTabViewController();
+            self.window?.rootViewController = tabVC;
+        }
         return true
     }
 

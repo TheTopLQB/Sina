@@ -8,12 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		9F0233851C9E5B86009D3E41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233841C9E5B86009D3E41 /* AppDelegate.swift */; };
-		9F0233871C9E5B86009D3E41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233861C9E5B86009D3E41 /* ViewController.swift */; };
-		9F02338A1C9E5B86009D3E41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0233881C9E5B86009D3E41 /* Main.storyboard */; };
 		9F02338C1C9E5B86009D3E41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F02338B1C9E5B86009D3E41 /* Assets.xcassets */; };
 		9F02338F1C9E5B86009D3E41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F02338D1C9E5B86009D3E41 /* LaunchScreen.storyboard */; };
 		9F02339A1C9E5B86009D3E41 /* SinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233991C9E5B86009D3E41 /* SinaTests.swift */; };
 		9F0233A51C9E5B86009D3E41 /* SinaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233A41C9E5B86009D3E41 /* SinaUITests.swift */; };
+		9F0233B31C9E5BC0009D3E41 /* Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233B21C9E5BC0009D3E41 /* Public.swift */; };
+		9F0233B71C9E5BDE009D3E41 /* LQBOauthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233B51C9E5BDE009D3E41 /* LQBOauthViewController.swift */; };
+		9F0233B81C9E5BDE009D3E41 /* LQBOauthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0233B61C9E5BDE009D3E41 /* LQBOauthViewController.xib */; };
+		9F0233BA1C9E61DC009D3E41 /* LQBNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233B91C9E61DC009D3E41 /* LQBNetworkTool.swift */; };
+		9F0233BC1C9E8AE7009D3E41 /* LQBTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233BB1C9E8AE7009D3E41 /* LQBTabViewController.swift */; };
+		9F0233BE1C9E90ED009D3E41 /* LQBAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233BD1C9E90ED009D3E41 /* LQBAccount.swift */; };
+		9F0233C51C9E98E7009D3E41 /* LQBNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233C41C9E98E7009D3E41 /* LQBNavigation.swift */; };
+		9F0233D01C9E9F76009D3E41 /* LQBMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233CE1C9E9F76009D3E41 /* LQBMeViewController.swift */; };
+		9F0233D11C9E9F76009D3E41 /* LQBMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0233CF1C9E9F76009D3E41 /* LQBMeViewController.xib */; };
+		9F0233D41C9E9F87009D3E41 /* LQBMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233D21C9E9F87009D3E41 /* LQBMessageViewController.swift */; };
+		9F0233D51C9E9F87009D3E41 /* LQBMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0233D31C9E9F87009D3E41 /* LQBMessageViewController.xib */; };
+		9F0233D81C9E9FB5009D3E41 /* LQBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233D61C9E9FB5009D3E41 /* LQBHomeViewController.swift */; };
+		9F0233D91C9E9FB5009D3E41 /* LQBHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0233D71C9E9FB5009D3E41 /* LQBHomeViewController.xib */; };
+		9F0233DC1C9EA05B009D3E41 /* LQBDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233DA1C9EA05B009D3E41 /* LQBDiscoverViewController.swift */; };
+		9F0233DD1C9EA05B009D3E41 /* LQBDiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0233DB1C9EA05B009D3E41 /* LQBDiscoverViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +49,6 @@
 /* Begin PBXFileReference section */
 		9F0233811C9E5B86009D3E41 /* Sina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0233841C9E5B86009D3E41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F0233861C9E5B86009D3E41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9F0233891C9E5B86009D3E41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F02338B1C9E5B86009D3E41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F02338E1C9E5B86009D3E41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F0233901C9E5B86009D3E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +58,22 @@
 		9F0233A01C9E5B86009D3E41 /* SinaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SinaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0233A41C9E5B86009D3E41 /* SinaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinaUITests.swift; sourceTree = "<group>"; };
 		9F0233A61C9E5B86009D3E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F0233B21C9E5BC0009D3E41 /* Public.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Public.swift; sourceTree = "<group>"; };
+		9F0233B41C9E5BCB009D3E41 /* BridgeOC_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeOC_Header.h; sourceTree = "<group>"; };
+		9F0233B51C9E5BDE009D3E41 /* LQBOauthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LQBOauthViewController.swift; path = ../../LQBOauthViewController.swift; sourceTree = "<group>"; };
+		9F0233B61C9E5BDE009D3E41 /* LQBOauthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LQBOauthViewController.xib; path = ../../LQBOauthViewController.xib; sourceTree = "<group>"; };
+		9F0233B91C9E61DC009D3E41 /* LQBNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LQBNetworkTool.swift; path = ../LQBNetworkTool.swift; sourceTree = "<group>"; };
+		9F0233BB1C9E8AE7009D3E41 /* LQBTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LQBTabViewController.swift; path = ../../LQBTabViewController.swift; sourceTree = "<group>"; };
+		9F0233BD1C9E90ED009D3E41 /* LQBAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LQBAccount.swift; path = ../LQBAccount.swift; sourceTree = "<group>"; };
+		9F0233C41C9E98E7009D3E41 /* LQBNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBNavigation.swift; sourceTree = "<group>"; };
+		9F0233CE1C9E9F76009D3E41 /* LQBMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBMeViewController.swift; sourceTree = "<group>"; };
+		9F0233CF1C9E9F76009D3E41 /* LQBMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQBMeViewController.xib; sourceTree = "<group>"; };
+		9F0233D21C9E9F87009D3E41 /* LQBMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBMessageViewController.swift; sourceTree = "<group>"; };
+		9F0233D31C9E9F87009D3E41 /* LQBMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQBMessageViewController.xib; sourceTree = "<group>"; };
+		9F0233D61C9E9FB5009D3E41 /* LQBHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBHomeViewController.swift; sourceTree = "<group>"; };
+		9F0233D71C9E9FB5009D3E41 /* LQBHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQBHomeViewController.xib; sourceTree = "<group>"; };
+		9F0233DA1C9EA05B009D3E41 /* LQBDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBDiscoverViewController.swift; sourceTree = "<group>"; };
+		9F0233DB1C9EA05B009D3E41 /* LQBDiscoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQBDiscoverViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +125,14 @@
 			isa = PBXGroup;
 			children = (
 				9F0233841C9E5B86009D3E41 /* AppDelegate.swift */,
-				9F0233861C9E5B86009D3E41 /* ViewController.swift */,
-				9F0233881C9E5B86009D3E41 /* Main.storyboard */,
+				9F0233C21C9E9854009D3E41 /* Extension */,
+				9F0233C31C9E9854009D3E41 /* Tool */,
+				9F0233C01C9E97FD009D3E41 /* VC */,
+				9F0233BF1C9E97FD009D3E41 /* Model */,
+				9F0233C11C9E97FD009D3E41 /* View */,
 				9F02338B1C9E5B86009D3E41 /* Assets.xcassets */,
+				9F0233B21C9E5BC0009D3E41 /* Public.swift */,
+				9F0233B41C9E5BCB009D3E41 /* BridgeOC_Header.h */,
 				9F02338D1C9E5B86009D3E41 /* LaunchScreen.storyboard */,
 				9F0233901C9E5B86009D3E41 /* Info.plist */,
 			);
@@ -123,6 +155,103 @@
 				9F0233A61C9E5B86009D3E41 /* Info.plist */,
 			);
 			path = SinaUITests;
+			sourceTree = "<group>";
+		};
+		9F0233BF1C9E97FD009D3E41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F0233BD1C9E90ED009D3E41 /* LQBAccount.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9F0233C01C9E97FD009D3E41 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				9F0233C61C9E9EF5009D3E41 /* Discover */,
+				9F0233C71C9E9EF5009D3E41 /* Home */,
+				9F0233C81C9E9EF5009D3E41 /* Me */,
+				9F0233C91C9E9EF5009D3E41 /* Message */,
+				9F0233CA1C9E9F1E009D3E41 /* Oauth */,
+				9F0233CB1C9E9F1E009D3E41 /* tab */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		9F0233C11C9E97FD009D3E41 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F0233C21C9E9854009D3E41 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9F0233C31C9E9854009D3E41 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				9F0233B91C9E61DC009D3E41 /* LQBNetworkTool.swift */,
+				9F0233C41C9E98E7009D3E41 /* LQBNavigation.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		9F0233C61C9E9EF5009D3E41 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				9F0233DA1C9EA05B009D3E41 /* LQBDiscoverViewController.swift */,
+				9F0233DB1C9EA05B009D3E41 /* LQBDiscoverViewController.xib */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		9F0233C71C9E9EF5009D3E41 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9F0233D61C9E9FB5009D3E41 /* LQBHomeViewController.swift */,
+				9F0233D71C9E9FB5009D3E41 /* LQBHomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9F0233C81C9E9EF5009D3E41 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				9F0233CE1C9E9F76009D3E41 /* LQBMeViewController.swift */,
+				9F0233CF1C9E9F76009D3E41 /* LQBMeViewController.xib */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		9F0233C91C9E9EF5009D3E41 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				9F0233D21C9E9F87009D3E41 /* LQBMessageViewController.swift */,
+				9F0233D31C9E9F87009D3E41 /* LQBMessageViewController.xib */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		9F0233CA1C9E9F1E009D3E41 /* Oauth */ = {
+			isa = PBXGroup;
+			children = (
+				9F0233B51C9E5BDE009D3E41 /* LQBOauthViewController.swift */,
+				9F0233B61C9E5BDE009D3E41 /* LQBOauthViewController.xib */,
+			);
+			path = Oauth;
+			sourceTree = "<group>";
+		};
+		9F0233CB1C9E9F1E009D3E41 /* tab */ = {
+			isa = PBXGroup;
+			children = (
+				9F0233BB1C9E8AE7009D3E41 /* LQBTabViewController.swift */,
+			);
+			path = tab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +358,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F0233DD1C9EA05B009D3E41 /* LQBDiscoverViewController.xib in Resources */,
+				9F0233D11C9E9F76009D3E41 /* LQBMeViewController.xib in Resources */,
+				9F0233D51C9E9F87009D3E41 /* LQBMessageViewController.xib in Resources */,
 				9F02338F1C9E5B86009D3E41 /* LaunchScreen.storyboard in Resources */,
+				9F0233D91C9E9FB5009D3E41 /* LQBHomeViewController.xib in Resources */,
 				9F02338C1C9E5B86009D3E41 /* Assets.xcassets in Resources */,
-				9F02338A1C9E5B86009D3E41 /* Main.storyboard in Resources */,
+				9F0233B81C9E5BDE009D3E41 /* LQBOauthViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +389,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F0233871C9E5B86009D3E41 /* ViewController.swift in Sources */,
+				9F0233BE1C9E90ED009D3E41 /* LQBAccount.swift in Sources */,
 				9F0233851C9E5B86009D3E41 /* AppDelegate.swift in Sources */,
+				9F0233BA1C9E61DC009D3E41 /* LQBNetworkTool.swift in Sources */,
+				9F0233B71C9E5BDE009D3E41 /* LQBOauthViewController.swift in Sources */,
+				9F0233D41C9E9F87009D3E41 /* LQBMessageViewController.swift in Sources */,
+				9F0233C51C9E98E7009D3E41 /* LQBNavigation.swift in Sources */,
+				9F0233BC1C9E8AE7009D3E41 /* LQBTabViewController.swift in Sources */,
+				9F0233D81C9E9FB5009D3E41 /* LQBHomeViewController.swift in Sources */,
+				9F0233DC1C9EA05B009D3E41 /* LQBDiscoverViewController.swift in Sources */,
+				9F0233D01C9E9F76009D3E41 /* LQBMeViewController.swift in Sources */,
+				9F0233B31C9E5BC0009D3E41 /* Public.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +435,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9F0233881C9E5B86009D3E41 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9F0233891C9E5B86009D3E41 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9F02338D1C9E5B86009D3E41 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -482,6 +616,7 @@
 				9F0233AB1C9E5B86009D3E41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F0233AC1C9E5B86009D3E41 /* Build configuration list for PBXNativeTarget "SinaTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +625,7 @@
 				9F0233AE1C9E5B86009D3E41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F0233AF1C9E5B86009D3E41 /* Build configuration list for PBXNativeTarget "SinaUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +634,7 @@
 				9F0233B11C9E5B86009D3E41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
