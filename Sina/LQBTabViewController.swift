@@ -54,7 +54,6 @@ class LQBTabViewController: UITabBarController {
         self.viewControllers = [homeNav,messageNav,publishNav,discoverNav,meNav];
     }
 
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         

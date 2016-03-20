@@ -43,7 +43,7 @@ class LQBOauthViewController: UIViewController, WKNavigationDelegate{
 //                            "code":code];
             let networker = LQBNetworkTool();
             //虽然此处新浪微博说的是POST请求，但是不把参数放在url里面会报错，这是个巨坑。
-            networker.requestFromServer("POST", path: "access_token?client_id=\(appKey)&client_secret=\(appSecret)&grant_type=authorization_code&code=\(code)&redirect_uri=\(redictURL)", params: [:], successClosure: { (data) -> Void in
+            networker.requestFromServer("POST", path: "https://api.weibo.com/oauth2/access_token?client_id=\(appKey)&client_secret=\(appSecret)&grant_type=authorization_code&code=\(code)&redirect_uri=\(redictURL)", params: [:], successClosure: { (data) -> Void in
                 print(data);
                 LQBAccount.shareAccount.uid = data["uid"] as!String;
                 LQBAccount.shareAccount.token = data["access_token"] as!String;

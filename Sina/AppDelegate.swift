@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }else{
             let tabVC = LQBTabViewController();
             self.window?.rootViewController = tabVC;
+            LQBAccount.shareAccount.uid = NSUserDefaults.standardUserDefaults().objectForKey(AccountUidKey)as!String;
+            LQBAccount.shareAccount.token = NSUserDefaults.standardUserDefaults().objectForKey(AccountTokenKey)as!String;
         }
         return true
     }

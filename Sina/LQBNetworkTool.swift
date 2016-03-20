@@ -10,24 +10,47 @@ import UIKit
 
 class LQBNetworkTool: NSObject ,NSURLSessionDelegate{
     func requestFromServer(method:String,path:String,params:NSDictionary,successClosure:(data:NSDictionary)->Void,failure:(error:NSError)->Void) {
-        let urlStr = "https://api.weibo.com/oauth2/"+path;
-        print(urlStr);
-        let url = NSURL(string: urlStr);
+        let url = NSURL(string: path);
         let request = NSMutableURLRequest(URL: url!);
-        print(request);
         let paramsData = try? NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions.PrettyPrinted)
-        print(params);
+        print("api:\(path)");
+        print("params:\(params)");
         request.HTTPMethod = method;
         request.HTTPBody = paramsData;
+        print(request);
         let session = NSURLSession.sharedSession();
         let task = session.dataTaskWithRequest(request) { (data, respose, error) -> Void in
             if (error == nil) {
+//                let str = NSString.init(data: data!, encoding: NSUTF8StringEncoding);
+//                print("----\(str!)");
                 let json = try?NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments);
+//                print(json!);
                 successClosure(data: json! as! NSDictionary);
             }else{
-                
+                failure(error: error!);
             }
         }
         task.resume();
+    }
+}
+
+
+extension LQBNetworkTool {
+    func requestHomeStatus(successClosure:(statusArray:NSArray)->Void,failure:(error:NSError)->Void) {
+        let path = "https://api.weibo.com/2/statuses/friends_timeline.json?access_token=\(LQBAccount.shareAccount.token)&uid=\(LQBAccount.shareAccount.uid)";
+        self.requestFromServer("GET", path: path, params: [:], successClosure: { (data) -> Void in
+            let statusArray = data["statuses"];
+            print(statusArray!);
+            var modelArray:[LQBWeiBoStatus] = [];
+            for index in 0..<statusArray!.count {
+                let dic = statusArray![index] as!NSDictionary
+                let statusModel = LQBWeiBoStatus();
+                statusModel.setValuesForKeysWithDictionary(dic as! [String : AnyObject]);
+                modelArray.append(statusModel);
+            }
+            successClosure(statusArray: modelArray);
+            }) { (error) -> Void in
+                
+        };
     }
 }

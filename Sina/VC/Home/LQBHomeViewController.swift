@@ -8,28 +8,36 @@
 
 import UIKit
 
-class LQBHomeViewController: UIViewController {
+class LQBHomeViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
+    @IBOutlet weak var tableView: UITableView!
+    var modelArray:[LQBWeiBoStatus] = [];
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.loadStatus();
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
+        self.tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: "homeCell");
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func loadStatus() {
+        let api = LQBNetworkTool();
+        api.requestHomeStatus({ (statusArray) -> Void in
+            self.modelArray = statusArray as! [LQBWeiBoStatus];
+            self.tableView.reloadData();
+            }) { (error) -> Void in
+                
+        };
     }
-    */
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.modelArray.count;
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("homeCell", forIndexPath: indexPath);
+        cell.backgroundColor = UIColor.redColor();
+        return cell;
+    }
 
 }
