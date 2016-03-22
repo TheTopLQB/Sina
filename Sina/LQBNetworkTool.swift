@@ -21,8 +21,8 @@ class LQBNetworkTool: NSObject ,NSURLSessionDelegate{
         let session = NSURLSession.sharedSession();
         let task = session.dataTaskWithRequest(request) { (data, respose, error) -> Void in
             if (error == nil) {
-//                let str = NSString.init(data: data!, encoding: NSUTF8StringEncoding);
-//                print("----\(str!)");
+                let str = NSString.init(data: data!, encoding: NSUTF8StringEncoding);
+                print("----\(str!)");
                 let json = try?NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments);
 //                print(json!);
                 successClosure(data: json! as! NSDictionary);
@@ -41,16 +41,18 @@ extension LQBNetworkTool {
         self.requestFromServer("GET", path: path, params: [:], successClosure: { (data) -> Void in
             let statusArray = data["statuses"];
             print(statusArray!);
-            var modelArray:[LQBWeiBoStatus] = [];
+            var modelArray:[LQBHomeCellFrame] = [];
             for index in 0..<statusArray!.count {
                 let dic = statusArray![index] as!NSDictionary
                 let statusModel = LQBWeiBoStatus();
                 statusModel.setValuesForKeysWithDictionary(dic as! [String : AnyObject]);
-                modelArray.append(statusModel);
+                let cellFrame = LQBHomeCellFrame();
+                cellFrame.weiboStatus = statusModel;
+                modelArray.append(cellFrame);
             }
             successClosure(statusArray: modelArray);
             }) { (error) -> Void in
-                
+                failure(error: error);
         };
     }
 }

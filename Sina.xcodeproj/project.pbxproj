@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97DBC5212BF62AB95CFF825C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2615DE88BE1E7CC9AB312EA /* libPods.a */; };
 		9F0233851C9E5B86009D3E41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233841C9E5B86009D3E41 /* AppDelegate.swift */; };
 		9F02338C1C9E5B86009D3E41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F02338B1C9E5B86009D3E41 /* Assets.xcassets */; };
 		9F02338F1C9E5B86009D3E41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F02338D1C9E5B86009D3E41 /* LaunchScreen.storyboard */; };
@@ -28,6 +29,9 @@
 		9F0233DC1C9EA05B009D3E41 /* LQBDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233DA1C9EA05B009D3E41 /* LQBDiscoverViewController.swift */; };
 		9F0233DD1C9EA05B009D3E41 /* LQBDiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0233DB1C9EA05B009D3E41 /* LQBDiscoverViewController.xib */; };
 		9F0233DF1C9EAD30009D3E41 /* LQBWeiBoStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233DE1C9EAD30009D3E41 /* LQBWeiBoStatus.swift */; };
+		9FBAD72F1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBAD72D1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.swift */; };
+		9FBAD7301CA02E9E00CE1AA9 /* LQBHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBAD72E1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.xib */; };
+		9FF4C98F1CA0CA9E005285B4 /* LQBHomeCellFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C98E1CA0CA9E005285B4 /* LQBHomeCellFrame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46ED0C713425FA8E0E2FBBCC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4EC841BF58A584D6010E90B0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9F0233811C9E5B86009D3E41 /* Sina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0233841C9E5B86009D3E41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F02338B1C9E5B86009D3E41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +82,10 @@
 		9F0233DA1C9EA05B009D3E41 /* LQBDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBDiscoverViewController.swift; sourceTree = "<group>"; };
 		9F0233DB1C9EA05B009D3E41 /* LQBDiscoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQBDiscoverViewController.xib; sourceTree = "<group>"; };
 		9F0233DE1C9EAD30009D3E41 /* LQBWeiBoStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBWeiBoStatus.swift; sourceTree = "<group>"; };
+		9FBAD72D1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBHomeTableViewCell.swift; sourceTree = "<group>"; };
+		9FBAD72E1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQBHomeTableViewCell.xib; sourceTree = "<group>"; };
+		9FF4C98E1CA0CA9E005285B4 /* LQBHomeCellFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBHomeCellFrame.swift; sourceTree = "<group>"; };
+		E2615DE88BE1E7CC9AB312EA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97DBC5212BF62AB95CFF825C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +114,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		634A604D54D48ABA20888703 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2615DE88BE1E7CC9AB312EA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63948D620B1B7DA21E05759E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4EC841BF58A584D6010E90B0 /* Pods.debug.xcconfig */,
+				46ED0C713425FA8E0E2FBBCC /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9F0233781C9E5B86009D3E41 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +138,8 @@
 				9F0233981C9E5B86009D3E41 /* SinaTests */,
 				9F0233A31C9E5B86009D3E41 /* SinaUITests */,
 				9F0233821C9E5B86009D3E41 /* Products */,
+				63948D620B1B7DA21E05759E /* Pods */,
+				634A604D54D48ABA20888703 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +214,9 @@
 		9F0233C11C9E97FD009D3E41 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9FBAD72D1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.swift */,
+				9FBAD72E1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.xib */,
+				9FF4C98E1CA0CA9E005285B4 /* LQBHomeCellFrame.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,9 +297,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F0233A91C9E5B86009D3E41 /* Build configuration list for PBXNativeTarget "Sina" */;
 			buildPhases = (
+				AFF7BF9F53A944DC8506414C /* Check Pods Manifest.lock */,
 				9F02337D1C9E5B86009D3E41 /* Sources */,
 				9F02337E1C9E5B86009D3E41 /* Frameworks */,
 				9F02337F1C9E5B86009D3E41 /* Resources */,
+				10E0E8BC5CB84FFFA565748E /* Embed Pods Frameworks */,
+				D3648DED152B6AC0AD84D338 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -365,6 +401,7 @@
 				9F0233D11C9E9F76009D3E41 /* LQBMeViewController.xib in Resources */,
 				9F0233D51C9E9F87009D3E41 /* LQBMessageViewController.xib in Resources */,
 				9F02338F1C9E5B86009D3E41 /* LaunchScreen.storyboard in Resources */,
+				9FBAD7301CA02E9E00CE1AA9 /* LQBHomeTableViewCell.xib in Resources */,
 				9F0233D91C9E9FB5009D3E41 /* LQBHomeViewController.xib in Resources */,
 				9F02338C1C9E5B86009D3E41 /* Assets.xcassets in Resources */,
 				9F0233B81C9E5BDE009D3E41 /* LQBOauthViewController.xib in Resources */,
@@ -387,6 +424,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10E0E8BC5CB84FFFA565748E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFF7BF9F53A944DC8506414C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D3648DED152B6AC0AD84D338 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9F02337D1C9E5B86009D3E41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -398,8 +483,10 @@
 				9F0233B71C9E5BDE009D3E41 /* LQBOauthViewController.swift in Sources */,
 				9F0233D41C9E9F87009D3E41 /* LQBMessageViewController.swift in Sources */,
 				9F0233C51C9E98E7009D3E41 /* LQBNavigation.swift in Sources */,
+				9FF4C98F1CA0CA9E005285B4 /* LQBHomeCellFrame.swift in Sources */,
 				9F0233BC1C9E8AE7009D3E41 /* LQBTabViewController.swift in Sources */,
 				9F0233D81C9E9FB5009D3E41 /* LQBHomeViewController.swift in Sources */,
+				9FBAD72F1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.swift in Sources */,
 				9F0233DF1C9EAD30009D3E41 /* LQBWeiBoStatus.swift in Sources */,
 				9F0233DC1C9EA05B009D3E41 /* LQBDiscoverViewController.swift in Sources */,
 				9F0233D01C9E9F76009D3E41 /* LQBMeViewController.swift in Sources */,
@@ -533,6 +620,7 @@
 		};
 		9F0233AA1C9E5B86009D3E41 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EC841BF58A584D6010E90B0 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Sina/Info.plist;
@@ -540,11 +628,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LQB.Sina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Sina/BridgeOC_Header.h;
 			};
 			name = Debug;
 		};
 		9F0233AB1C9E5B86009D3E41 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46ED0C713425FA8E0E2FBBCC /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Sina/Info.plist;
@@ -552,6 +642,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LQB.Sina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Sina/BridgeOC_Header.h;
 			};
 			name = Release;
 		};

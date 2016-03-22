@@ -9,5 +9,5 @@
 #ifndef BridgeOC_Header_h
 #define BridgeOC_Header_h
 
-
+#import <UIImageView+WebCache.h>
 #endif /* BridgeOC_Header_h */

@@ -8,25 +8,30 @@
 
 import UIKit
 
+let homeReuseIdentifier = "homeCell"
+
 class LQBHomeViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
-    var modelArray:[LQBWeiBoStatus] = [];
+    var modelArray:[LQBHomeCellFrame] = [];
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadStatus();
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
-        self.tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: "homeCell");
+        self.tableView.registerNib(UINib(nibName: "LQBHomeTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: homeReuseIdentifier);
+        
+        self.navigationItem.leftBarButtonItem = LQBNavigation.barItem("", image: "navigationbar_friendsearch", tagart: self, action: Selector("done"));
+        self.navigationItem.titleView = LQBNavigation.titleViewWithText("首页");
     }
     
     func loadStatus() {
         let api = LQBNetworkTool();
         api.requestHomeStatus({ (statusArray) -> Void in
-            self.modelArray = statusArray as! [LQBWeiBoStatus];
+            self.modelArray = statusArray as! [LQBHomeCellFrame];
             self.tableView.reloadData();
             }) { (error) -> Void in
-                
+                print(error)
         };
     }
     
@@ -35,9 +40,17 @@ class LQBHomeViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("homeCell", forIndexPath: indexPath);
-        cell.backgroundColor = UIColor.redColor();
+        let cell = tableView.dequeueReusableCellWithIdentifier(homeReuseIdentifier, forIndexPath: indexPath)as!LQBHomeTableViewCell;
+        cell.cellFrame = self.modelArray[indexPath.row];
+//        cell.backgroundColor = UIColor.redColor();
         return cell;
     }
-
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 80;
+    }
+    
+    func done() {
+        
+    }
 }
