@@ -45,9 +45,20 @@ class User: NSObject {
     var vip:Bool?
     
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {
-        
+        if (key == "mbrank"){
+            let mbrank = value as?Int;
+            self.mbrank = mbrank;
+        }
+        if (key == "mbtype") {
+            let mbtype = value as?Int;
+            self.mbtype = mbtype;
+            if (mbtype > 2){
+                self.vip = true;
+            }else{
+                self.vip = false;
+            }
+        }
     }
-    
 }
 
 

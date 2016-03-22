@@ -42,7 +42,6 @@ class LQBHomeViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(homeReuseIdentifier, forIndexPath: indexPath)as!LQBHomeTableViewCell;
         cell.cellFrame = self.modelArray[indexPath.row];
-//        cell.backgroundColor = UIColor.redColor();
         return cell;
     }
     

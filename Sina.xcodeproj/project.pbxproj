@@ -32,6 +32,7 @@
 		9FBAD72F1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBAD72D1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.swift */; };
 		9FBAD7301CA02E9E00CE1AA9 /* LQBHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBAD72E1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.xib */; };
 		9FF4C98F1CA0CA9E005285B4 /* LQBHomeCellFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C98E1CA0CA9E005285B4 /* LQBHomeCellFrame.swift */; };
+		9FF4C9911CA0D254005285B4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C9901CA0D254005285B4 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		9FBAD72D1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBHomeTableViewCell.swift; sourceTree = "<group>"; };
 		9FBAD72E1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQBHomeTableViewCell.xib; sourceTree = "<group>"; };
 		9FF4C98E1CA0CA9E005285B4 /* LQBHomeCellFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBHomeCellFrame.swift; sourceTree = "<group>"; };
+		9FF4C9901CA0D254005285B4 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		E2615DE88BE1E7CC9AB312EA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -224,6 +226,7 @@
 		9F0233C21C9E9854009D3E41 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9FF4C9901CA0D254005285B4 /* Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF4C9911CA0D254005285B4 /* Extension.swift in Sources */,
 				9F0233BE1C9E90ED009D3E41 /* LQBAccount.swift in Sources */,
 				9F0233851C9E5B86009D3E41 /* AppDelegate.swift in Sources */,
 				9F0233BA1C9E61DC009D3E41 /* LQBNetworkTool.swift in Sources */,
