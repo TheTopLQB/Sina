@@ -17,7 +17,7 @@ class LQBNetworkTool: NSObject ,NSURLSessionDelegate{
         print("params:\(params)");
         request.HTTPMethod = method;
         request.HTTPBody = paramsData;
-        print(request);
+//        print(request);
         let session = NSURLSession.sharedSession();
         let task = session.dataTaskWithRequest(request) { (data, respose, error) -> Void in
             if (error == nil) {

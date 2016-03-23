@@ -28,6 +28,12 @@ class LQBWeiBoStatus: NSObject {
             user.setValuesForKeysWithDictionary(dic as! [String : AnyObject]);
             self.user = user;
         }
+        if (key == "retweeted_status") {
+            let dic = value as!NSDictionary;
+            let status = LQBWeiBoStatus();
+            status.setValuesForKeysWithDictionary(dic as! [String : AnyObject]);
+            self.retweeted_status = status;
+        }
     }
     
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {

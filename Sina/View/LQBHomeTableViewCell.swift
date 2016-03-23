@@ -13,8 +13,14 @@ class LQBHomeTableViewCell: UITableViewCell {
     var nameLabel:UILabel?
     var vipLevelImage:UIImageView?
     var contentLabel:UILabel?
-    var bottomView:UIView?
+    var photosView:UIView?
+    
+    var retweetView:UIView?
+    var retweetContentLable:UILabel?
+    var retweetPhotosView:UIView?
+    
     var bottomButtonView:BottomButtonView?
+    var bottomView:UIView?
     var cellFrame:LQBHomeCellFrame = LQBHomeCellFrame() {
         didSet {
             self.avatarImageView?.frame = cellFrame.avatarImageViewFrame!;
@@ -37,6 +43,16 @@ class LQBHomeTableViewCell: UITableViewCell {
                 self.vipLevelImage?.hidden = true;
             }
             self.contentLabel?.text = cellFrame.weiboStatus.text;
+            
+            if (cellFrame.weiboStatus.retweeted_status != nil) {
+                self.retweetView?.frame = cellFrame.retweetViewFrame!;
+                self.retweetContentLable?.frame = cellFrame.retweetContentLableFrame!;
+                self.retweetPhotosView?.frame = cellFrame.retweetPhotosViewFrame!;
+                self.retweetContentLable?.text = (cellFrame.weiboStatus.retweeted_status!.user?.name)! + cellFrame.weiboStatus.retweeted_status!.text!;
+                self.retweetView?.hidden = false;
+            }else{
+                self.retweetView?.hidden = true;
+            }
         }
     }
     override func awakeFromNib() {
@@ -66,6 +82,19 @@ class LQBHomeTableViewCell: UITableViewCell {
         
         self.bottomButtonView = NSBundle.mainBundle().loadNibNamed("BottomButtonView", owner: nil, options: nil).last as?BottomButtonView;
         self.contentView.addSubview(self.bottomButtonView!);
+        
+        self.retweetView = UIView();
+        self.retweetView?.backgroundColor = UIColor.init(red: 247/255.0, green: 247/255.0, blue: 247/255.0, alpha: 1);
+        self.contentView.addSubview(self.retweetView!);
+        
+        self.retweetContentLable = UILabel();
+        retweetContentLable?.numberOfLines = 0;
+        retweetContentLable?.font = UIFont.systemFontOfSize(14);
+        self.retweetView!.addSubview(self.retweetContentLable!);
+        
+        self.retweetPhotosView = UIView();
+        self.retweetPhotosView?.backgroundColor = UIColor.yellowColor();
+        self.retweetView!.addSubview(self.retweetPhotosView!);
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
