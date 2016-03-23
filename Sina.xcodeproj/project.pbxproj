@@ -29,6 +29,10 @@
 		9F0233DC1C9EA05B009D3E41 /* LQBDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233DA1C9EA05B009D3E41 /* LQBDiscoverViewController.swift */; };
 		9F0233DD1C9EA05B009D3E41 /* LQBDiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0233DB1C9EA05B009D3E41 /* LQBDiscoverViewController.xib */; };
 		9F0233DF1C9EAD30009D3E41 /* LQBWeiBoStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233DE1C9EAD30009D3E41 /* LQBWeiBoStatus.swift */; };
+		9F7B6A9A1CA227060036E134 /* BottomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B6A991CA227060036E134 /* BottomButtonView.swift */; };
+		9F7B6A9C1CA227210036E134 /* BottomButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B6A9B1CA227210036E134 /* BottomButtonView.xib */; };
+		9F7B6A9F1CA2313E0036E134 /* RefreshFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B6A9D1CA2313E0036E134 /* RefreshFooter.swift */; };
+		9F7B6AA01CA2313E0036E134 /* RefreshFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B6A9E1CA2313E0036E134 /* RefreshFooter.xib */; };
 		9FBAD72F1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBAD72D1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.swift */; };
 		9FBAD7301CA02E9E00CE1AA9 /* LQBHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FBAD72E1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.xib */; };
 		9FF4C98F1CA0CA9E005285B4 /* LQBHomeCellFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C98E1CA0CA9E005285B4 /* LQBHomeCellFrame.swift */; };
@@ -83,6 +87,10 @@
 		9F0233DA1C9EA05B009D3E41 /* LQBDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBDiscoverViewController.swift; sourceTree = "<group>"; };
 		9F0233DB1C9EA05B009D3E41 /* LQBDiscoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQBDiscoverViewController.xib; sourceTree = "<group>"; };
 		9F0233DE1C9EAD30009D3E41 /* LQBWeiBoStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBWeiBoStatus.swift; sourceTree = "<group>"; };
+		9F7B6A991CA227060036E134 /* BottomButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomButtonView.swift; sourceTree = "<group>"; };
+		9F7B6A9B1CA227210036E134 /* BottomButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomButtonView.xib; sourceTree = "<group>"; };
+		9F7B6A9D1CA2313E0036E134 /* RefreshFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshFooter.swift; sourceTree = "<group>"; };
+		9F7B6A9E1CA2313E0036E134 /* RefreshFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefreshFooter.xib; sourceTree = "<group>"; };
 		9FBAD72D1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBHomeTableViewCell.swift; sourceTree = "<group>"; };
 		9FBAD72E1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQBHomeTableViewCell.xib; sourceTree = "<group>"; };
 		9FF4C98E1CA0CA9E005285B4 /* LQBHomeCellFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBHomeCellFrame.swift; sourceTree = "<group>"; };
@@ -219,6 +227,10 @@
 				9FBAD72D1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.swift */,
 				9FBAD72E1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.xib */,
 				9FF4C98E1CA0CA9E005285B4 /* LQBHomeCellFrame.swift */,
+				9F7B6A991CA227060036E134 /* BottomButtonView.swift */,
+				9F7B6A9B1CA227210036E134 /* BottomButtonView.xib */,
+				9F7B6A9D1CA2313E0036E134 /* RefreshFooter.swift */,
+				9F7B6A9E1CA2313E0036E134 /* RefreshFooter.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -400,9 +412,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F7B6A9C1CA227210036E134 /* BottomButtonView.xib in Resources */,
 				9F0233DD1C9EA05B009D3E41 /* LQBDiscoverViewController.xib in Resources */,
 				9F0233D11C9E9F76009D3E41 /* LQBMeViewController.xib in Resources */,
 				9F0233D51C9E9F87009D3E41 /* LQBMessageViewController.xib in Resources */,
+				9F7B6AA01CA2313E0036E134 /* RefreshFooter.xib in Resources */,
 				9F02338F1C9E5B86009D3E41 /* LaunchScreen.storyboard in Resources */,
 				9FBAD7301CA02E9E00CE1AA9 /* LQBHomeTableViewCell.xib in Resources */,
 				9F0233D91C9E9FB5009D3E41 /* LQBHomeViewController.xib in Resources */,
@@ -487,12 +501,14 @@
 				9F0233B71C9E5BDE009D3E41 /* LQBOauthViewController.swift in Sources */,
 				9F0233D41C9E9F87009D3E41 /* LQBMessageViewController.swift in Sources */,
 				9F0233C51C9E98E7009D3E41 /* LQBNavigation.swift in Sources */,
+				9F7B6A9F1CA2313E0036E134 /* RefreshFooter.swift in Sources */,
 				9FF4C98F1CA0CA9E005285B4 /* LQBHomeCellFrame.swift in Sources */,
 				9F0233BC1C9E8AE7009D3E41 /* LQBTabViewController.swift in Sources */,
 				9F0233D81C9E9FB5009D3E41 /* LQBHomeViewController.swift in Sources */,
 				9FBAD72F1CA02E9E00CE1AA9 /* LQBHomeTableViewCell.swift in Sources */,
 				9F0233DF1C9EAD30009D3E41 /* LQBWeiBoStatus.swift in Sources */,
 				9F0233DC1C9EA05B009D3E41 /* LQBDiscoverViewController.swift in Sources */,
+				9F7B6A9A1CA227060036E134 /* BottomButtonView.swift in Sources */,
 				9F0233D01C9E9F76009D3E41 /* LQBMeViewController.swift in Sources */,
 				9F0233B31C9E5BC0009D3E41 /* Public.swift in Sources */,
 			);

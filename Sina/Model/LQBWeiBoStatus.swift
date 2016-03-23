@@ -15,7 +15,7 @@ class LQBWeiBoStatus: NSObject {
     
     var idstr:String?
     var created_at:String?
-    var NSString:String?
+    var text:String?
     var pic_urls:NSArray?
     var retweeted_status:LQBWeiBoStatus?
     var user:User?

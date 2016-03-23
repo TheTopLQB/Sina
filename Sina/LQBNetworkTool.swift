@@ -21,8 +21,8 @@ class LQBNetworkTool: NSObject ,NSURLSessionDelegate{
         let session = NSURLSession.sharedSession();
         let task = session.dataTaskWithRequest(request) { (data, respose, error) -> Void in
             if (error == nil) {
-                let str = NSString.init(data: data!, encoding: NSUTF8StringEncoding);
-                print("----\(str!)");
+//                let str = NSString.init(data: data!, encoding: NSUTF8StringEncoding);
+//                print("----\(str!)");
                 let json = try?NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments);
 //                print(json!);
                 successClosure(data: json! as! NSDictionary);
@@ -36,11 +36,11 @@ class LQBNetworkTool: NSObject ,NSURLSessionDelegate{
 
 
 extension LQBNetworkTool {
-    func requestHomeStatus(successClosure:(statusArray:NSArray)->Void,failure:(error:NSError)->Void) {
+    func requestHomeStatus(params:NSDictionary,successClosure:(statusArray:NSArray)->Void,failure:(error:NSError)->Void) {
         let path = "https://api.weibo.com/2/statuses/friends_timeline.json?access_token=\(LQBAccount.shareAccount.token)&uid=\(LQBAccount.shareAccount.uid)";
-        self.requestFromServer("GET", path: path, params: [:], successClosure: { (data) -> Void in
+        self.requestFromServer("GET", path: path, params: params, successClosure: { (data) -> Void in
             let statusArray = data["statuses"];
-            print(statusArray!);
+//            print(statusArray!);
             var modelArray:[LQBHomeCellFrame] = [];
             for index in 0..<statusArray!.count {
                 let dic = statusArray![index] as!NSDictionary

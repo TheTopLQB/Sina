@@ -12,12 +12,22 @@ class LQBHomeCellFrame: NSObject {
     var avatarImageViewFrame:CGRect?
     var nameLabelFrame:CGRect?
     var vipLevelImageFrame:CGRect?
+    var contentLabelFrame:CGRect?
+    var cellHeight:CGFloat?
+    var bottomViewFrame:CGRect?
+    var bottomButtonViewFrame:CGRect?
+    
     var weiboStatus:LQBWeiBoStatus = LQBWeiBoStatus() {
         didSet {
             self.avatarImageViewFrame = CGRectMake(10, 10, 40, 40);
             let size = NSString.sizeFromString((weiboStatus.user?.name!)!, font: UIFont.systemFontOfSize(14), width: CGFloat(MAXFLOAT));
             self.nameLabelFrame = CGRectMake(60, 10, size.width, 30);
             self.vipLevelImageFrame = CGRectMake(CGRectGetMaxX(self.nameLabelFrame!)+10, 18, 15, 15);
+            let contentSize = NSString.sizeFromString(weiboStatus.text!, font: UIFont.systemFontOfSize(14), width: WIDTH - 20);
+            self.contentLabelFrame = CGRectMake(10, CGRectGetMaxY(self.avatarImageViewFrame!)+10, contentSize.width, contentSize.height);
+            self.bottomButtonViewFrame = CGRectMake(0, CGRectGetMaxY(self.contentLabelFrame!)+10, WIDTH, 40);
+            self.bottomViewFrame = CGRectMake(0, CGRectGetMaxY(self.bottomButtonViewFrame!), WIDTH, 10);
+            self.cellHeight = CGRectGetMaxY(self.bottomViewFrame!);
         }
     }
 }

@@ -12,6 +12,7 @@ let homeReuseIdentifier = "homeCell"
 
 class LQBHomeViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
+    var refreshControl:UIRefreshControl?;
     var modelArray:[LQBHomeCellFrame] = [];
 
     override func viewDidLoad() {
@@ -23,16 +24,43 @@ class LQBHomeViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         
         self.navigationItem.leftBarButtonItem = LQBNavigation.barItem("", image: "navigationbar_friendsearch", tagart: self, action: Selector("done"));
         self.navigationItem.titleView = LQBNavigation.titleViewWithText("首页");
+        
+        self.refreshControl = UIRefreshControl.init(frame: CGRectMake(0, 0, WIDTH, 40));
+        self.refreshControl!.addTarget(self, action: Selector("loadStatus"), forControlEvents: UIControlEvents.ValueChanged);
+        self.tableView.addSubview(self.refreshControl!);
+        
+        self.tableView.tableFooterView = RefreshFooter.footer() as? UIView;
+        self.tableView.tableFooterView?.hidden = true;
     }
     
     func loadStatus() {
         let api = LQBNetworkTool();
-        api.requestHomeStatus({ (statusArray) -> Void in
+        api.requestHomeStatus([:], successClosure: { (statusArray) -> Void in
             self.modelArray = statusArray as! [LQBHomeCellFrame];
-            self.tableView.reloadData();
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.tableView.reloadData();
+                self.refreshControl?.endRefreshing();
+            })
             }) { (error) -> Void in
                 print(error)
-        };
+        }
+    }
+    
+    func loadMoreSratus() {
+        let cellFrame = self.modelArray[0];
+        let idStr = cellFrame.weiboStatus.idstr;
+        let params:NSDictionary = ["since_id":idStr!];
+        let api = LQBNetworkTool();
+        api.requestHomeStatus(params, successClosure: { (statusArray) -> Void in
+            for index in 0..<statusArray.count {
+                self.modelArray.append(statusArray[statusArray.count - 1 - index] as! LQBHomeCellFrame);
+            }
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.tableView.reloadData();
+                self.tableView.tableFooterView?.hidden = true;
+            })
+            }) { (error) -> Void in
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,7 +74,18 @@ class LQBHomeViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 80;
+        return self.modelArray[indexPath.row].cellHeight!;
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if (self.modelArray.count == 0) || (self.tableView.tableFooterView?.hidden == false) {
+            return;
+        }
+        let y = scrollView.contentSize.height + scrollView.contentInset.bottom - scrollView.frame.size.height - self.tableView!.tableFooterView!.frame.size.height;
+        if (scrollView.contentOffset.y > y) {
+            self.tableView.tableFooterView?.hidden = false;
+            self.loadMoreSratus();
+        }
     }
     
     func done() {
