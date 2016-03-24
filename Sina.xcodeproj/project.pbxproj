@@ -29,6 +29,7 @@
 		9F0233DC1C9EA05B009D3E41 /* LQBDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233DA1C9EA05B009D3E41 /* LQBDiscoverViewController.swift */; };
 		9F0233DD1C9EA05B009D3E41 /* LQBDiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0233DB1C9EA05B009D3E41 /* LQBDiscoverViewController.xib */; };
 		9F0233DF1C9EAD30009D3E41 /* LQBWeiBoStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0233DE1C9EAD30009D3E41 /* LQBWeiBoStatus.swift */; };
+		9F77BEC91CA37C6B00E46E29 /* LQBStatusPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77BEC81CA37C6B00E46E29 /* LQBStatusPhotosView.swift */; };
 		9F7B6A9A1CA227060036E134 /* BottomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B6A991CA227060036E134 /* BottomButtonView.swift */; };
 		9F7B6A9C1CA227210036E134 /* BottomButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B6A9B1CA227210036E134 /* BottomButtonView.xib */; };
 		9F7B6A9F1CA2313E0036E134 /* RefreshFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B6A9D1CA2313E0036E134 /* RefreshFooter.swift */; };
@@ -87,6 +88,7 @@
 		9F0233DA1C9EA05B009D3E41 /* LQBDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBDiscoverViewController.swift; sourceTree = "<group>"; };
 		9F0233DB1C9EA05B009D3E41 /* LQBDiscoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LQBDiscoverViewController.xib; sourceTree = "<group>"; };
 		9F0233DE1C9EAD30009D3E41 /* LQBWeiBoStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBWeiBoStatus.swift; sourceTree = "<group>"; };
+		9F77BEC81CA37C6B00E46E29 /* LQBStatusPhotosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LQBStatusPhotosView.swift; sourceTree = "<group>"; };
 		9F7B6A991CA227060036E134 /* BottomButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomButtonView.swift; sourceTree = "<group>"; };
 		9F7B6A9B1CA227210036E134 /* BottomButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomButtonView.xib; sourceTree = "<group>"; };
 		9F7B6A9D1CA2313E0036E134 /* RefreshFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshFooter.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				9FF4C98E1CA0CA9E005285B4 /* LQBHomeCellFrame.swift */,
 				9F7B6A991CA227060036E134 /* BottomButtonView.swift */,
 				9F7B6A9B1CA227210036E134 /* BottomButtonView.xib */,
+				9F77BEC81CA37C6B00E46E29 /* LQBStatusPhotosView.swift */,
 				9F7B6A9D1CA2313E0036E134 /* RefreshFooter.swift */,
 				9F7B6A9E1CA2313E0036E134 /* RefreshFooter.xib */,
 			);
@@ -499,6 +502,7 @@
 				9F0233851C9E5B86009D3E41 /* AppDelegate.swift in Sources */,
 				9F0233BA1C9E61DC009D3E41 /* LQBNetworkTool.swift in Sources */,
 				9F0233B71C9E5BDE009D3E41 /* LQBOauthViewController.swift in Sources */,
+				9F77BEC91CA37C6B00E46E29 /* LQBStatusPhotosView.swift in Sources */,
 				9F0233D41C9E9F87009D3E41 /* LQBMessageViewController.swift in Sources */,
 				9F0233C51C9E98E7009D3E41 /* LQBNavigation.swift in Sources */,
 				9F7B6A9F1CA2313E0036E134 /* RefreshFooter.swift in Sources */,

@@ -13,6 +13,7 @@ class LQBHomeCellFrame: NSObject {
     var nameLabelFrame:CGRect?
     var vipLevelImageFrame:CGRect?
     var contentLabelFrame:CGRect?
+    var photosViewFrame:CGRect?
     
     var retweetViewFrame:CGRect?
     var retweetContentLableFrame:CGRect?
@@ -30,23 +31,35 @@ class LQBHomeCellFrame: NSObject {
             self.vipLevelImageFrame = CGRectMake(CGRectGetMaxX(self.nameLabelFrame!)+10, 18, 15, 15);
             let contentSize = NSString.sizeFromString(weiboStatus.text!, font: UIFont.systemFontOfSize(14), width: WIDTH - 20);
             self.contentLabelFrame = CGRectMake(10, CGRectGetMaxY(self.avatarImageViewFrame!)+10, contentSize.width, contentSize.height);
-            var retweetdHeight:CGFloat = 0.0;
+            var originalStausHeight:CGFloat = 0.0;
+            if (weiboStatus.pic_urls?.count > 0) {
+                let photosViewSize = LQBStatusPhotosView.photosSize((weiboStatus.pic_urls?.count)!);
+                self.photosViewFrame = CGRectMake(10, CGRectGetMaxY(self.contentLabelFrame!)+10, photosViewSize.width, photosViewSize.height);
+                originalStausHeight = CGRectGetMaxY(self.photosViewFrame!);
+            }else {
+                originalStausHeight = CGRectGetMaxY(self.contentLabelFrame!);
+                self.photosViewFrame = CGRectZero;
+            }
+            
+            var retweetdStatusHeight:CGFloat = 0.0;
             if (weiboStatus.retweeted_status != nil) {
                 let retweetedContent = (weiboStatus.retweeted_status?.user?.name)! + (weiboStatus.retweeted_status?.text)!;
-                let retweetedContentSize = NSString.sizeFromString(retweetedContent, font: UIFont.systemFontOfSize(14), width: WIDTH - 40);
+                let retweetedContentSize = NSString.sizeFromString(retweetedContent, font: UIFont.systemFontOfSize(14), width: WIDTH - 20);
                 self.retweetContentLableFrame = CGRectMake(10, 10, retweetedContentSize.width, retweetedContentSize.height);
                 if (weiboStatus.retweeted_status?.pic_urls?.count > 0){
-                    self.retweetPhotosViewFrame = CGRectMake(10, CGRectGetMaxY(self.retweetContentLableFrame!) + 10, WIDTH - 40, 100);
-                    retweetdHeight = CGRectGetMaxY(self.retweetPhotosViewFrame!) + 10.0;
+                    let retweetPhotosViewSize = LQBStatusPhotosView.photosSize((weiboStatus.retweeted_status?.pic_urls?.count)!);
+                    self.retweetPhotosViewFrame = CGRectMake(10, CGRectGetMaxY(self.retweetContentLableFrame!) + 10, retweetPhotosViewSize.width, retweetPhotosViewSize.height);
+                    retweetdStatusHeight = CGRectGetMaxY(self.retweetPhotosViewFrame!) + 10.0;
                 }else{
-                    retweetdHeight = CGRectGetMaxY(self.retweetContentLableFrame!) + 10.0;
+                    self.retweetPhotosViewFrame = CGRectZero;
+                    retweetdStatusHeight = CGRectGetMaxY(self.retweetContentLableFrame!) + 10.0;
                 }
-                self.retweetViewFrame = CGRectMake(0, CGRectGetMaxY(self.contentLabelFrame!) + 10, WIDTH, retweetedContentSize.height + 130);
+                self.retweetViewFrame = CGRectMake(0, originalStausHeight + 10, WIDTH, retweetdStatusHeight);
             }else {
                 self.retweetViewFrame = CGRectZero;
             }
             
-            self.bottomButtonViewFrame = CGRectMake(0, CGRectGetMaxY(self.contentLabelFrame!)+retweetdHeight + 10.0, WIDTH, 40);
+            self.bottomButtonViewFrame = CGRectMake(0, originalStausHeight + 10 + retweetdStatusHeight + 10.0, WIDTH, 40);
             self.bottomViewFrame = CGRectMake(0, CGRectGetMaxY(self.bottomButtonViewFrame!), WIDTH, 10);
             self.cellHeight = CGRectGetMaxY(self.bottomViewFrame!);
         }

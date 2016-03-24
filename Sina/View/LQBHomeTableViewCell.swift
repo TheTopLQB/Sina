@@ -13,11 +13,11 @@ class LQBHomeTableViewCell: UITableViewCell {
     var nameLabel:UILabel?
     var vipLevelImage:UIImageView?
     var contentLabel:UILabel?
-    var photosView:UIView?
+    var photosView:LQBStatusPhotosView?
     
     var retweetView:UIView?
     var retweetContentLable:UILabel?
-    var retweetPhotosView:UIView?
+    var retweetPhotosView:LQBStatusPhotosView?
     
     var bottomButtonView:BottomButtonView?
     var bottomView:UIView?
@@ -30,6 +30,7 @@ class LQBHomeTableViewCell: UITableViewCell {
             self.contentLabel?.frame = cellFrame.contentLabelFrame!;
             self.bottomView?.frame = cellFrame.bottomViewFrame!;
             self.bottomButtonView?.frame = cellFrame.bottomButtonViewFrame!;
+            self.photosView?.frame = cellFrame.photosViewFrame!
             let name = cellFrame.weiboStatus.user?.name;
             self.nameLabel?.text = name!;
             if ((cellFrame.weiboStatus.user?.vip)==true) {
@@ -43,12 +44,25 @@ class LQBHomeTableViewCell: UITableViewCell {
                 self.vipLevelImage?.hidden = true;
             }
             self.contentLabel?.text = cellFrame.weiboStatus.text;
+            if (cellFrame.weiboStatus.pic_urls?.count > 0){
+                self.photosView?.photos = cellFrame.weiboStatus.pic_urls as! [NSDictionary];
+                self.photosView?.hidden = false;
+            }else{
+                self.photosView?.hidden = true;
+            }
             
             if (cellFrame.weiboStatus.retweeted_status != nil) {
                 self.retweetView?.frame = cellFrame.retweetViewFrame!;
                 self.retweetContentLable?.frame = cellFrame.retweetContentLableFrame!;
                 self.retweetPhotosView?.frame = cellFrame.retweetPhotosViewFrame!;
                 self.retweetContentLable?.text = (cellFrame.weiboStatus.retweeted_status!.user?.name)! + cellFrame.weiboStatus.retweeted_status!.text!;
+                if (cellFrame.weiboStatus.retweeted_status?.pic_urls?.count > 0) {
+                    print(cellFrame.weiboStatus.retweeted_status?.pic_urls);
+                    self.retweetPhotosView?.photos = (cellFrame.weiboStatus.retweeted_status?.pic_urls!)! as! [NSDictionary];
+                    self.retweetPhotosView?.hidden = false;
+                }else{
+                    self.retweetPhotosView?.hidden = true;
+                }
                 self.retweetView?.hidden = false;
             }else{
                 self.retweetView?.hidden = true;
@@ -76,12 +90,8 @@ class LQBHomeTableViewCell: UITableViewCell {
         self.contentLabel?.numberOfLines = 0;
         self.contentView.addSubview(self.contentLabel!);
         
-        self.bottomView = UIView();
-        self.bottomView?.backgroundColor = UIColor.lightGrayColor();
-        self.contentView.addSubview(self.bottomView!);
-        
-        self.bottomButtonView = NSBundle.mainBundle().loadNibNamed("BottomButtonView", owner: nil, options: nil).last as?BottomButtonView;
-        self.contentView.addSubview(self.bottomButtonView!);
+        self.photosView = LQBStatusPhotosView();
+        self.contentView.addSubview(self.photosView!);
         
         self.retweetView = UIView();
         self.retweetView?.backgroundColor = UIColor.init(red: 247/255.0, green: 247/255.0, blue: 247/255.0, alpha: 1);
@@ -92,9 +102,16 @@ class LQBHomeTableViewCell: UITableViewCell {
         retweetContentLable?.font = UIFont.systemFontOfSize(14);
         self.retweetView!.addSubview(self.retweetContentLable!);
         
-        self.retweetPhotosView = UIView();
-        self.retweetPhotosView?.backgroundColor = UIColor.yellowColor();
+        self.retweetPhotosView = LQBStatusPhotosView();
         self.retweetView!.addSubview(self.retweetPhotosView!);
+        
+        self.bottomView = UIView();
+        self.bottomView?.backgroundColor = UIColor.lightGrayColor();
+        self.contentView.addSubview(self.bottomView!);
+        
+        self.bottomButtonView = NSBundle.mainBundle().loadNibNamed("BottomButtonView", owner: nil, options: nil).last as?BottomButtonView;
+        self.contentView.addSubview(self.bottomButtonView!);
+
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
