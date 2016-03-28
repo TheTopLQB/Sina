@@ -12,6 +12,9 @@ class LQBHomeTableViewCell: UITableViewCell {
     var avatarImageView:UIImageView?
     var nameLabel:UILabel?
     var vipLevelImage:UIImageView?
+    
+    var timeLabel:UILabel?
+    var sourceLabel:UILabel?
     var contentLabel:UILabel?
     var photosView:LQBStatusPhotosView?
     
@@ -27,6 +30,8 @@ class LQBHomeTableViewCell: UITableViewCell {
             let imageStr = cellFrame.weiboStatus.user?.profile_image_url;
             self.avatarImageView?.sd_setImageWithURL(NSURL(string: imageStr!), placeholderImage: nil);
             self.nameLabel?.frame = cellFrame.nameLabelFrame!;
+            self.timeLabel?.frame = cellFrame.timeLabelFrame!;
+            self.sourceLabel?.frame = cellFrame.sourceLabelFrame!;
             self.contentLabel?.frame = cellFrame.contentLabelFrame!;
             self.bottomView?.frame = cellFrame.bottomViewFrame!;
             self.bottomButtonView?.frame = cellFrame.bottomButtonViewFrame!;
@@ -43,6 +48,8 @@ class LQBHomeTableViewCell: UITableViewCell {
                 self.nameLabel?.textColor = UIColor.blackColor();
                 self.vipLevelImage?.hidden = true;
             }
+            self.timeLabel?.text = cellFrame.weiboStatus.time;
+            self.sourceLabel?.text = cellFrame.weiboStatus.sourceString;
             self.contentLabel?.text = cellFrame.weiboStatus.text;
             if (cellFrame.weiboStatus.pic_urls?.count > 0){
                 self.photosView?.photos = cellFrame.weiboStatus.pic_urls as! [NSDictionary];
@@ -81,6 +88,16 @@ class LQBHomeTableViewCell: UITableViewCell {
         self.nameLabel?.textColor = UIColor.orangeColor();
         self.nameLabel?.font = UIFont.systemFontOfSize(14);
         self.contentView.addSubview(self.nameLabel!);
+        
+        self.timeLabel = UILabel.init();
+        self.timeLabel?.textColor = UIColor.grayColor();
+        self.timeLabel?.font = UIFont.systemFontOfSize(12);
+        self.contentView.addSubview(self.timeLabel!);
+        
+        self.sourceLabel = UILabel.init();
+        self.sourceLabel?.textColor = UIColor.grayColor();
+        self.sourceLabel?.font = UIFont.systemFontOfSize(12);
+        self.contentView.addSubview(self.sourceLabel!);
         
         self.vipLevelImage = UIImageView.init();
         self.contentView.addSubview(self.vipLevelImage!);

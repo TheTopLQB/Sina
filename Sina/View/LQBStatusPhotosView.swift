@@ -8,7 +8,7 @@
 
 import UIKit
 
-let photoWH = 70;
+let photoWH = Int((UIScreen.mainScreen().bounds.size.width - 40.0)/3.0);
 let margin = 10;
 
 class LQBStatusPhotosView: UIView {
@@ -18,7 +18,10 @@ class LQBStatusPhotosView: UIView {
             let count = photos.count;
             while (self.subviews.count < count) {
                 let imageView = UIImageView();
-                imageView.backgroundColor = UIColor.redColor();
+                imageView.backgroundColor = UIColor.lightGrayColor();
+//                imageView.backgroundColor = UIColor.redColor();
+//                imageView.contentMode = UIViewContentMode.ScaleAspectFill;
+//                imageView.clipsToBounds = true;
                 self.addSubview(imageView);
             }
             

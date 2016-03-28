@@ -12,6 +12,10 @@ class LQBHomeCellFrame: NSObject {
     var avatarImageViewFrame:CGRect?
     var nameLabelFrame:CGRect?
     var vipLevelImageFrame:CGRect?
+    
+    var timeLabelFrame:CGRect?
+    var sourceLabelFrame:CGRect?
+    
     var contentLabelFrame:CGRect?
     var photosViewFrame:CGRect?
     
@@ -28,6 +32,12 @@ class LQBHomeCellFrame: NSObject {
             self.avatarImageViewFrame = CGRectMake(10, 10, 40, 40);
             let size = NSString.sizeFromString((weiboStatus.user?.name!)!, font: UIFont.systemFontOfSize(14), width: CGFloat(MAXFLOAT));
             self.nameLabelFrame = CGRectMake(60, 10, size.width, 30);
+            let timeLabelSize = NSString.sizeFromString(weiboStatus.time, font: UIFont.systemFontOfSize(12), width: CGFloat(MAXFLOAT));
+            self.timeLabelFrame = CGRectMake(60, 35, timeLabelSize.width, 20);
+            
+            let souceSize = NSString.sizeFromString(weiboStatus.sourceString, font: UIFont.systemFontOfSize(12), width: CGFloat(MAXFLOAT));
+            self.sourceLabelFrame = CGRectMake(CGRectGetMaxX(self.timeLabelFrame!), 35, souceSize.width, 20);
+            
             self.vipLevelImageFrame = CGRectMake(CGRectGetMaxX(self.nameLabelFrame!)+10, 18, 15, 15);
             let contentSize = NSString.sizeFromString(weiboStatus.text!, font: UIFont.systemFontOfSize(14), width: WIDTH - 20);
             self.contentLabelFrame = CGRectMake(10, CGRectGetMaxY(self.avatarImageViewFrame!)+10, contentSize.width, contentSize.height);

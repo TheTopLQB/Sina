@@ -4,7 +4,7 @@
 //
 //  Created by 李庆彬 on 3/20/16.
 //  Copyright © 2016 LQB. All rights reserved.
-//
+//  网络请求类
 
 import UIKit
 
@@ -40,7 +40,7 @@ extension LQBNetworkTool {
         let path = "https://api.weibo.com/2/statuses/friends_timeline.json?access_token=\(LQBAccount.shareAccount.token)&uid=\(LQBAccount.shareAccount.uid)";
         self.requestFromServer("GET", path: path, params: params, successClosure: { (data) -> Void in
             let statusArray = data["statuses"];
-//            print(statusArray!);
+            print(statusArray!);
             var modelArray:[LQBHomeCellFrame] = [];
             for index in 0..<statusArray!.count {
                 let dic = statusArray![index] as!NSDictionary

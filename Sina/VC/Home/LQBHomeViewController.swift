@@ -17,6 +17,7 @@ class LQBHomeViewController: UIViewController ,UITableViewDelegate,UITableViewDa
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //请求数据
         self.loadStatus();
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
@@ -25,10 +26,12 @@ class LQBHomeViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         self.navigationItem.leftBarButtonItem = LQBNavigation.barItem("", image: "navigationbar_friendsearch", tagart: self, action: Selector("done"));
         self.navigationItem.titleView = LQBNavigation.titleViewWithText("首页");
         
+        //下拉刷新
         self.refreshControl = UIRefreshControl.init(frame: CGRectMake(0, 0, WIDTH, 40));
         self.refreshControl!.addTarget(self, action: Selector("loadStatus"), forControlEvents: UIControlEvents.ValueChanged);
         self.tableView.addSubview(self.refreshControl!);
         
+        //上拉加载更多时显示
         self.tableView.tableFooterView = RefreshFooter.footer() as? UIView;
         self.tableView.tableFooterView?.hidden = true;
     }
